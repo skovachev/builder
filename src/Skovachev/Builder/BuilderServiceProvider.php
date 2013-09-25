@@ -18,7 +18,7 @@ class BuilderServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->bind('builder_service', function()
+		$this->app->singleton('builder_service', function()
         {
             return new BuilderService;
         });

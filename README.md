@@ -1,6 +1,11 @@
 Builder
 ======
 
+TODOs
+-----
+1. Add tests
+2. Update Readme with guide on how to use package
+
 A collection of core classes for Laravel 4 Apps
 
 DON'T BE A DICK PUBLIC LICENSE

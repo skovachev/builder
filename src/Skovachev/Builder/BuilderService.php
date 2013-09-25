@@ -32,7 +32,8 @@ class BuilderService
         {
             $builderClass = $item->getBuilderClass();
             $builder = App::make($builderClass);
-            return $builder->build($item, $this->context);
+            $builder->setContext($this->context);
+            return $builder->build($item);
         }
         else if (is_object($item) && method_exists($item, 'toArray'))
         {
