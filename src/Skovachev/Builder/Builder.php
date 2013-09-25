@@ -28,7 +28,7 @@ abstract class Builder
             if (isset($objectRelations[$relation]))
             {
                 $relationData = $object->getRelation(Str::camel($relation));
-                $builderService = App::make('Skovachev\Builder\BuilderService');
+                $builderService = App::make('builder_service');
                 $built[$alias] = $builderService->buildResponse($relationData);
             }
         }

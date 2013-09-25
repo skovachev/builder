@@ -18,7 +18,10 @@ class BuilderServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app->bind('builder_service', function()
+        {
+            return new BuilderService;
+        });
 	}
 
 	/**
@@ -28,7 +31,7 @@ class BuilderServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('builder_service');
 	}
 
 }
