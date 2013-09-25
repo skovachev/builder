@@ -1,0 +1,24 @@
+{
+    "name": "skovachev/builder",
+    "description": "Builder classes for Laravel 4",
+    "keywords": ["laravel", "builder"],
+    "homepage": "http://github.com/skovachev/builder",
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "Stefan Kovachev",
+            "email": "contact@eskapism.com",
+            "homepage": "www.eskapism.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Skovachev\\Builder": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
