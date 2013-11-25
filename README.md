@@ -1,16 +1,14 @@
 Builder
 ======
+Builder classes for Laravel 4
 
 TODOs
 -----
 1. Add tests
 2. Update Readme with guide on how to use package
 
-A collection of core classes for Laravel 4 Apps
-
 DON'T BE A DICK PUBLIC LICENSE
 ------------------------------
-
 Everyone is permitted to copy and distribute verbatim or modified copies of this license document, and changing it is allowed as long as the name is changed.
 
 DON'T BE A DICK PUBLIC LICENSE TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION

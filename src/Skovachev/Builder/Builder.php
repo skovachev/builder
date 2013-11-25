@@ -38,7 +38,9 @@ abstract class Builder
     {
         $built = array();
 
-        foreach ($this->attributes as $alias => $attribute) {
+        $attributes = $this->parseItems('attributes');
+
+        foreach ($attributes as $alias => $attribute) {
             if (isset($object->$attribute))
             {
                 $built[$alias] = $object->$attribute;
@@ -46,8 +48,9 @@ abstract class Builder
         }
 
         $objectRelations = $object->relationsToArray();
+        $relations = $this->parseItems('relations');
 
-        foreach ($this->relations as $alias => $relation) {
+        foreach ($relations as $alias => $relation) {
             if (isset($objectRelations[$relation]))
             {
                 $relationData = $object->getRelation(Str::camel($relation));
@@ -57,5 +60,23 @@ abstract class Builder
         }
 
         return $built;
+    }
+
+    protected function parseItems($itemsKey)
+    {
+        $items = array();
+
+        foreach ($this->$itemsKey as $key => $name) {
+            if (is_numeric($key))
+            {
+                $items[$name] = $name;
+            }
+            else
+            {
+                $items[$key] = $name;
+            }
+        }
+
+        return $items;
     }
 }
