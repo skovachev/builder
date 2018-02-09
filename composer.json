@@ -3,7 +3,7 @@
     "description": "Builder classes for Laravel 4",
     "keywords": ["laravel", "builder"],
     "homepage": "http://github.com/skovachev/builder",
-    "license": "DBAD",
+    "license": "MIT",
     "authors": [
         {
             "name": "Stefan Kovachev",
